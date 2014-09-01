@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Date</th>
+						<th>Action</th>
+						<th>Owner</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="log in logs track by $index">
+						<td>{{$index}}</td>
+						<td>{{log.dateCreate | date : dateformat }}</td>
+						<td>{{log.codeAction}}</td>
+						<td>{{log.owner.name}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
